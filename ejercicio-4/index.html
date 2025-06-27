@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ej3 listado de tarea</title>
-    <Style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi Primera App en React</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
         body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -36,16 +39,11 @@ button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
-    </Style>
-</head>
-<body>
-    <h1>Listado de Tareas</h1>
-    <div class="contenedor-botones">
-        <button id="botonMostrarCompletadas">Mostrar Tareas Completadas</button>
-        <button id="botonMostrarIncompletas">Mostrar Tareas Incompletas</button>
-    </div>
-    <ul id="listadoTareas"></ul>
-    
-    <script src="app.js"></script>
-</body>
+
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="app.js" type="text/babel"></script>
+  </body>
 </html>
