@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Ejercicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        #contenedor-mayor {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="number"]:focus, select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        #btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        #btn:hover:not(:disabled) {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        #btn:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .resultado {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-color: #ffeaa7;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor-mayor">
+        <h2>Calculadora Matemática</h2>
+
+        <form id="formulario">
+            <div class="form-group">
+                <label for="n1">Primer número:</label>
+                <input type="number" id="n1" step="any" placeholder="Ingrese el primer número" required>
+            </div>
+
+            <div class="form-group">
+                <label for="n2">Segundo número:</label>
+                <input type="number" id="n2" step="any" placeholder="Ingrese el segundo número" required>
+            </div>
+
+            <div class="form-group">
+                <label for="operaciones">Seleccione la operación:</label>
+                <select id="operaciones" required>
+                    <option value="">-- Seleccione una operación --</option>
+                    <option value="suma">Suma (+)</option>
+                    <option value="resta">Resta (-)</option>
+                    <option value="multiplicacion">Multiplicación (×)</option>
+                    <option value="division">División (÷)</option>
+                </select>
+            </div>
+
+            <input type="submit" id="btn" value="Calcular">
+        </form>
+
+        <div id="resultados"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
